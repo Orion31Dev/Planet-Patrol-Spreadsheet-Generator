@@ -10,7 +10,7 @@ def main():
     # insertIndex = 12
 
     spreadsheet.init_service()
-    # spreadsheet.fetch_spreadsheet()
+    spreadsheet.fetch_spreadsheet()
 
     outputPath = "./output.tsv"
     if (os.path.exists(outputPath)):
@@ -38,6 +38,6 @@ def main():
 
         output.close()
 
-        #spreadsheet.insert_sheet(outputPath)
+        spreadsheet.insert_sheet(outputPath)
         print("Done!")
 main()

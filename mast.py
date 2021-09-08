@@ -5,7 +5,6 @@ cols = ['ID', 'ra', 'dec', 'Tmag', 'GAIAmag', 'Vmag', 'Jmag', 'Kmag', 'Teff', 'l
 
 def get_catalog_info(tic_id):
     catalogData = Catalogs.query_object('TIC' + str(tic_id), radius = 0.002, catalog='TIC', pagesize=1).to_pandas()
-    print("Queried " + tic_id)
 
     for _, row in catalogData.iterrows():
         if row['ID'] == tic_id:
